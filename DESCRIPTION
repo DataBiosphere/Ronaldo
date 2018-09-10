@@ -1,4 +1,4 @@
-Package: ronaldo
+Package: Ronaldo
 Type: Package
 Title: Helper package for Leonardo 
 Version: 0.1.0
@@ -8,6 +8,6 @@ Description: This package encapsulates some of the most commonly functions resea
 License: file LICENSE
 Encoding: UTF-8
 LazyData: true
-Imports: 
+Imports:
     httr
 RoxygenNote: 6.1.0

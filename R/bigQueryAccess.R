@@ -1,5 +1,5 @@
 #' Function to get the token for bigquery access
-#
+#' @export
 #' @return the token to access BigQuery
 getToken <-  function() {
   token <- system("gcloud auth application-default print-access-token", intern=TRUE)
