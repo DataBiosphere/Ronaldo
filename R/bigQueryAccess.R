@@ -5,7 +5,7 @@ getToken <-  function() {
   token <- system("gcloud auth application-default print-access-token", intern=TRUE)
   bearer <- sprintf("Bearer %s", token)
   project <- Sys.getenv("GOOGLE_PROJECT")
-  samHost <- "sam.dsde-prod.broadinstitute.org"  # note this is PROD; replace with dev Sam in a dev notebook
+  samHost <- "sam.dsde-dev.broadinstitute.org"  # note this is PROD; replace with dev Sam in a dev notebook
   samUrl <- sprintf("https://%s/api/google/user/petServiceAccount/%s/key", samHost, project)
   json <- httr::GET(
     url = samUrl,
