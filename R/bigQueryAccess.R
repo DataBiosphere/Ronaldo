@@ -12,5 +12,5 @@ getToken <-  function() {
     httr::content_type_json(),
     httr::add_headers(Authorization = bearer))
   key <- httr::content(json, "text", encoding = "UTF-8")
-  return(key)
+  key
 }
