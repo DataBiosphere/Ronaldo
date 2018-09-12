@@ -4,7 +4,10 @@
 \alias{getToken}
 \title{Function to get the token for bigquery access}
 \usage{
-getToken()
+getToken(authEnv = "prod")
+}
+\arguments{
+\item{authEnv}{the environment to auth against}
 }
 \value{
 the token to access BigQuery

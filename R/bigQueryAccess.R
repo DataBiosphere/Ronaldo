@@ -1,11 +1,12 @@
 #' Function to get the token for bigquery access
 #' @export
+#' @param authEnv the environment to auth against
 #' @return the token to access BigQuery
-getToken <-  function() {
+getToken <-  function(authEnv = "prod") {
   token <- system("gcloud auth application-default print-access-token", intern=TRUE)
   bearer <- sprintf("Bearer %s", token)
   project <- Sys.getenv("GOOGLE_PROJECT")
-  samHost <- "sam.dsde-dev.broadinstitute.org"  # note this is PROD; replace with dev Sam in a dev notebook
+  samHost <- sprintf("sam.dsde-%s.broadinstitute.org", authEnv)  # note this is PROD; replace with dev Sam in a dev notebook
   samUrl <- sprintf("https://%s/api/google/user/petServiceAccount/%s/key", samHost, project)
   json <- httr::GET(
     url = samUrl,
