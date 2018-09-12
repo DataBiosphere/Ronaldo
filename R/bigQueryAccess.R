@@ -1,8 +1,8 @@
-#' Function to gets the key for the user's pet service account
+#' Function that returns the key for the user's pet service account
 #' @export
 #' @param authEnv the environment to auth against
-#' @return the token to access BigQuery
-getToken <-  function(authEnv = "prod") {
+#' @return the user's pet service account key
+getServiceAccountKey <-  function(authEnv = "prod") {
   token <-
     system("gcloud auth application-default print-access-token",
            intern = TRUE)
