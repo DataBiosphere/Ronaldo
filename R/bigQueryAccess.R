@@ -9,7 +9,7 @@ getServiceAccountKey <-  function(authEnv = "prod") {
   bearer <- sprintf("Bearer %s", token)
   project <- Sys.getenv("GOOGLE_PROJECT")
   samHost <-
-    sprintf("sam.dsde-%s.broadinstitute.org", authEnv)  # note this is PROD; replace with dev Sam in a dev notebook
+    sprintf("sam.dsde-%s.broadinstitute.org", authEnv)
   samUrl <-
     sprintf("https://%s/api/google/user/petServiceAccount/%s/key",
             samHost,
