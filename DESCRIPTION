@@ -1,0 +1,13 @@
+Package: Ronaldo
+Type: Package
+Title: Helper package for Leonardo 
+Version: 0.1.0
+Author: Vikram Kumra
+Maintainer: Vikram Kumra <vkumra@broadinstitute.org>
+Description: This package encapsulates some of the most commonly used functions researchers use when carrying out an analysis in an R notebook created from Leonardo.
+License: file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports:
+    httr
+RoxygenNote: 6.1.0
